@@ -147,7 +147,7 @@ func computeHashes(imgBytes []byte) (HashResponse, error) {
 		return HashResponse{}, err
 	}
 
-	standardHash := hashBuffer(buffer.Bytes())
+	standardHash := hashBuffer(imgBytes)
 	return HashResponse{
 		Standard:               standardHash,
 		AlphaNormalized:        alphaHash,
